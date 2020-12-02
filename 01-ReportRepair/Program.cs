@@ -17,6 +17,7 @@ namespace _01_ReportRepair
             values.Sort();
 
             //------------------------------ Part 1 ------------------------------------
+            System.Console.WriteLine("--------------------- Part 1 ---------------------------");
             for (var i = 0 ; i <values.Count && values[i]*2 < 2020; i++)
             {
                 int j = 2020 - values[i];
@@ -28,6 +29,7 @@ namespace _01_ReportRepair
             System.Console.WriteLine();
 
             //------------------------------ Part 2 ------------------------------------
+            System.Console.WriteLine("--------------------- Part 2 ---------------------------");
             for ( int i = 0; i < values.Count; i++)
             {
                 for (int j = i+1; j < values.Count && values[i]+values[j]*2<2020; j++)
@@ -39,6 +41,10 @@ namespace _01_ReportRepair
                     }
                 }
             }
+            System.Console.WriteLine();
+
+            System.Console.WriteLine("--------------------- END ---------------------------");
+
         }
     }
 }
