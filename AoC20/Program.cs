@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.IO;
+using System.Collections.Generic;
 
 namespace AoC20
 {
@@ -6,7 +7,15 @@ namespace AoC20
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<int> values = new List<int>();
+
+            foreach (string line in File.ReadLines(@"Resources/input.txt"))
+            {
+                values.Add(int.Parse(line));
+            }
+            values.Sort();
+            foreach ( var val in values)
+                System.Console.WriteLine(val);
         }
     }
 }
