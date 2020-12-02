@@ -11,6 +11,10 @@ namespace _02_PasswordPhilosophy
         public char Chr { get; set; }
         public string Password { get; set; }
 
+        /// <summary>
+        /// Convert a line of input to the relevant tokens
+        /// </summary>
+        /// <param name="str">a line from the input text</param>
         public Pword (string str)
         {
             var a = str.Split(": ");
@@ -47,6 +51,7 @@ namespace _02_PasswordPhilosophy
 
             return false;
         }
+
         public override string ToString()
         {
             return $"{Lo,2}-{Hi,2} [{Chr}] {Password}";
