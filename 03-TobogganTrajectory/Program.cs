@@ -16,55 +16,42 @@ namespace _03_TobogganTrajectory
 
             //------------------------------ Part 1 ------------------------------------
             System.Console.WriteLine("--------------------- Part 1 ---------------------------");
-
-            int cnt = 0;
-            int x = 0;
-            foreach (var line in lines)
             {
-                if (line[x] == '#')
-                    cnt++;
-                x = (x + 3) % line.Length;
-            }
-            System.Console.WriteLine(cnt);
+                int x = 0;
+                long cnt = 0;
 
+                foreach (var line in lines)
+                {
+                    if (line[x] == '#')
+                        cnt++;
+
+                    x = (x + 3) % line.Length;
+                }
+                System.Console.WriteLine(cnt);
+            }
             //------------------------------ Part 2 ------------------------------------
-             System.Console.WriteLine("--------------------- Part 2 ---------------------------");
-
-            long cnt1 = 0;
-            long cnt2 = 0;
-            long cnt3 = 0;
-            long cnt4 = 0;
-            long cnt5 = 0;
-            int x1 = 0;
-            int x2 = 0;
-            int x3 = 0;
-            int x4 = 0;
-            int x5 = 0;
-            int y = 0;
-            foreach (var line in lines)
+            System.Console.WriteLine("--------------------- Part 2 ---------------------------");
             {
-                if (line[x1] == '#')
-                    cnt1++;
-                if (line[x2] == '#')
-                    cnt2++;
-                if (line[x3] == '#')
-                    cnt3++;
-                if (line[x4] == '#')
-                    cnt4++;
-                if (line[x5] == '#' && y%2 == 0)
-                    cnt5++;
+                int y = 0;
 
-                x1 = (x1 + 1) % line.Length;
-                x2 = (x2 + 3) % line.Length;
-                x3 = (x3 + 5) % line.Length;
-                x4 = (x4 + 7) % line.Length;
-                x5 = (x5 + 1) % line.Length;
-                y++;
+                int[] x =  { 0, 0, 0, 0, 0 };
+                long[] cnt = { 0, 0, 0, 0, 0 };
+
+                foreach (var line in lines)
+                {
+                    for (int i = 0; i < 5; i++)
+                    {
+                        if (line[x[i]] == '#')
+                            if (i != 4 || y % 2 == 0)
+                                cnt[i]++;
+                        x[i] = (x[i] + (i * 2 + 1) % 8) % line.Length;
+                    }
+                    y++;
+                }
+                System.Console.WriteLine($"{cnt[0] * cnt[1] * cnt[2] * cnt[3] * cnt[4]}");
+
+                System.Console.WriteLine("--------------------- END ---------------------------");
             }
-            long prod = cnt1 * cnt2 * cnt3 * cnt4 * cnt5;
-                System.Console.WriteLine($"{cnt1,3} {cnt2,3} {cnt3,3} {cnt4,3} {cnt5,3} - {prod}");
-
-            System.Console.WriteLine("--------------------- END ---------------------------");
         }
     }
 }
