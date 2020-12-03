@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-ReportRepair", "01-ReportRepair\01-ReportRepair.csproj", "{36AFBC14-4558-406D-BB85-BF4CCBD10A82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-ReportRepair", "01-ReportRepair\01-ReportRepair.csproj", "{36AFBC14-4558-406D-BB85-BF4CCBD10A82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-PasswordPhilosophy", "02-PasswordPhilosophy\02-PasswordPhilosophy.csproj", "{4CF6B2EF-309F-4065-9AC7-EAE497614CC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-PasswordPhilosophy", "02-PasswordPhilosophy\02-PasswordPhilosophy.csproj", "{4CF6B2EF-309F-4065-9AC7-EAE497614CC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-TobogganTrajectory", "03-TobogganTrajectory\03-TobogganTrajectory.csproj", "{43759FA5-48C0-4D2A-8B36-B535732000B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00-Templates", "00-Templates\00-Templates.csproj", "{83849002-A4BD-44BC-BC60-D004565147CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{4CF6B2EF-309F-4065-9AC7-EAE497614CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CF6B2EF-309F-4065-9AC7-EAE497614CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CF6B2EF-309F-4065-9AC7-EAE497614CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43759FA5-48C0-4D2A-8B36-B535732000B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43759FA5-48C0-4D2A-8B36-B535732000B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43759FA5-48C0-4D2A-8B36-B535732000B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43759FA5-48C0-4D2A-8B36-B535732000B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83849002-A4BD-44BC-BC60-D004565147CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83849002-A4BD-44BC-BC60-D004565147CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83849002-A4BD-44BC-BC60-D004565147CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83849002-A4BD-44BC-BC60-D004565147CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
