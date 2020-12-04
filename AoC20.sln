@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-TobogganTrajectory", "03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00-Templates", "00-Templates\00-Templates.csproj", "{83849002-A4BD-44BC-BC60-D004565147CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-PassportProcessing", "04-PassportProcessing\04-PassportProcessing.csproj", "{80846A0E-C492-4874-B95E-A64C26F4ECA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{83849002-A4BD-44BC-BC60-D004565147CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83849002-A4BD-44BC-BC60-D004565147CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83849002-A4BD-44BC-BC60-D004565147CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80846A0E-C492-4874-B95E-A64C26F4ECA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80846A0E-C492-4874-B95E-A64C26F4ECA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80846A0E-C492-4874-B95E-A64C26F4ECA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80846A0E-C492-4874-B95E-A64C26F4ECA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
