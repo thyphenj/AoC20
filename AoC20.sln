@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-PassportProcessing", "04
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-BinaryBoarding", "05-BinaryBoarding\05-BinaryBoarding.csproj", "{9040E5E6-B8BC-419E-B2C3-033E367EDF6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-CustomCustoms", "06-CustomCustoms\06-CustomCustoms.csproj", "{7F765EC1-1C33-44CB-B739-59F4E39B1629}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9040E5E6-B8BC-419E-B2C3-033E367EDF6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9040E5E6-B8BC-419E-B2C3-033E367EDF6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9040E5E6-B8BC-419E-B2C3-033E367EDF6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F765EC1-1C33-44CB-B739-59F4E39B1629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F765EC1-1C33-44CB-B739-59F4E39B1629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F765EC1-1C33-44CB-B739-59F4E39B1629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F765EC1-1C33-44CB-B739-59F4E39B1629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
