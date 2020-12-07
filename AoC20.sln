@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-BinaryBoarding", "05-Bin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-CustomCustoms", "06-CustomCustoms\06-CustomCustoms.csproj", "{7F765EC1-1C33-44CB-B739-59F4E39B1629}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-HandyHaversacks", "07-HandyHaversacks\07-HandyHaversacks.csproj", "{FE0E30B9-B8B3-41DC-8B4B-604744390670}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{7F765EC1-1C33-44CB-B739-59F4E39B1629}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F765EC1-1C33-44CB-B739-59F4E39B1629}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F765EC1-1C33-44CB-B739-59F4E39B1629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0E30B9-B8B3-41DC-8B4B-604744390670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0E30B9-B8B3-41DC-8B4B-604744390670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0E30B9-B8B3-41DC-8B4B-604744390670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0E30B9-B8B3-41DC-8B4B-604744390670}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
