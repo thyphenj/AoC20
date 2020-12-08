@@ -65,30 +65,9 @@ namespace _07_HandyHaversacks
 
             Recipe root = recipes.Where(a => a.ThisBag.Raw == "shiny gold").FirstOrDefault();
 
-            foreach (var bag in root.Contents)
-                found.Add(bag.);
+            foreach (var x in root.Contents.Keys)
+                Console.WriteLine(x.Raw);
 
-
-
-            count = -1;
-            while (found.Count != count)
-            {
-                count = found.Count;
-                HashSet<Bag> f2 = new HashSet<Bag>();
-                foreach (var recipe in recipes)
-                {
-                    foreach (var r in found)
-                    {
-                        var bag = recipe.Contents.Keys.Where(a => a.Raw == r.Raw).FirstOrDefault();
-                        if (bag != null)
-                        {
-                            f2.Add(recipe.ThisBag);
-                        }
-                    }
-                }
-                foreach (var f in f2)
-                    found.Add(f);
-            }
             Console.WriteLine(found.Count);
 
         }
