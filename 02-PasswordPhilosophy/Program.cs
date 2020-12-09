@@ -16,21 +16,19 @@ namespace _02_PasswordPhilosophy
 
             int cnt;
 
-            //------------------------------ Part 1 ------------------------------------
-            System.Console.WriteLine("--------------------- Part 1 ---------------------------");
+            System.Console.WriteLine("02-PasswordPhilosophy\n--------------------- Part 1 ---------------------------");
             cnt = 0;
-            foreach  ( var val in values)
+            foreach (var val in values)
             {
                 if (val.ValidCount())
                 {
                     cnt++;
-  //                  System.Console.WriteLine(val.ToString());
                 }
             }
-            System.Console.WriteLine($"{cnt}\n");
+            System.Console.WriteLine($"{cnt}");
             System.Console.WriteLine();
 
-            //------------------------------ Part 2 ------------------------------------
+
             System.Console.WriteLine("--------------------- Part 2 ---------------------------");
             cnt = 0;
             foreach (var val in values)
@@ -38,7 +36,6 @@ namespace _02_PasswordPhilosophy
                 if (val.ValidPosition())
                 {
                     cnt++;
-//                    System.Console.WriteLine(val.ToString());
                 }
             }
             System.Console.WriteLine($"{cnt}");

@@ -14,7 +14,7 @@ namespace _06_CustomCustoms
 
             string[] groups = input.Split("\n\n");
 
-            Console.WriteLine("------------------- Part 1 -----------------------");
+            Console.WriteLine("06-CustomCustoms\n------------------- Part 1 -----------------------");
 
             int total = 0;
             foreach (var group in groups)

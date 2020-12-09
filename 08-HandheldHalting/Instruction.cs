@@ -7,7 +7,7 @@ namespace _08_HandheldHalting
         public string Opcode { get; set; }
         public int Argument { get; set; }
         public int Visited { set; get; }
-        static private int Accumulator { get; set; }
+        static public int Accumulator { get; set; }
 
         public Instruction(string str)
         {

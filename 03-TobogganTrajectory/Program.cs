@@ -14,8 +14,7 @@ namespace _03_TobogganTrajectory
                 lines.Add(line);
             }
 
-            //------------------------------ Part 1 ------------------------------------
-            System.Console.WriteLine("--------------------- Part 1 ---------------------------");
+            System.Console.WriteLine("03-TobogganTrajectory\n--------------------- Part 1 ---------------------------");
             {
                 int x = 0;
                 long cnt = 0;
@@ -29,12 +28,12 @@ namespace _03_TobogganTrajectory
                 }
                 System.Console.WriteLine(cnt);
             }
-            //------------------------------ Part 2 ------------------------------------
+
             System.Console.WriteLine("--------------------- Part 2 ---------------------------");
             {
                 int y = 0;
 
-                int[] x =  { 0, 0, 0, 0, 0 };
+                int[] x = { 0, 0, 0, 0, 0 };
                 long[] cnt = { 0, 0, 0, 0, 0 };
 
                 foreach (var line in lines)

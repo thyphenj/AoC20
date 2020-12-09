@@ -17,8 +17,8 @@ namespace _01_ReportRepair
             values.Sort();
 
             //------------------------------ Part 1 ------------------------------------
-            System.Console.WriteLine("--------------------- Part 1 ---------------------------");
-            for (var i = 0 ; i <values.Count && values[i]*2 < 2020; i++)
+            System.Console.WriteLine("01-ReportRepair\n--------------------- Part 1 ---------------------------");
+            for (var i = 0; i < values.Count && values[i] * 2 < 2020; i++)
             {
                 int j = 2020 - values[i];
                 if (values.Contains(j))
@@ -30,9 +30,9 @@ namespace _01_ReportRepair
 
             //------------------------------ Part 2 ------------------------------------
             System.Console.WriteLine("--------------------- Part 2 ---------------------------");
-            for ( int i = 0; i < values.Count; i++)
+            for (int i = 0; i < values.Count; i++)
             {
-                for (int j = i+1; j < values.Count && values[i]+values[j]*2<2020; j++)
+                for (int j = i + 1; j < values.Count && values[i] + values[j] * 2 < 2020; j++)
                 {
                     int k = 2020 - values[i] - values[j];
                     if (values.Contains(k))

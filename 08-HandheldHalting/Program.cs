@@ -12,20 +12,23 @@ namespace _08_HandheldHalting
             string[] input = File.ReadAllLines(@"Resources/input.txt");
 
             // ---------------------- Massage ----------------------------
-            Console.WriteLine("------------------- Part 1 -----------------------");
+
+            Console.WriteLine("08-HandheldHalting\n------------------- Part 1 -----------------------");
 
             List<Instruction> instructions = new List<Instruction>();
             foreach (var ins in input)
                 instructions.Add(new Instruction(ins));
 
             int sp = 0;
+            long prevAcc = 0;
             int offset = instructions[sp].Perform();
             while (instructions[sp].Visited < 2)
             {
+                prevAcc = Instruction.Accumulator; ;
                 sp += offset;
                 offset = instructions[sp].Perform();
             }
-            Console.WriteLine($"[{sp,4}]  {instructions[sp]} {instructions[sp].Visited}");
+            Console.WriteLine(prevAcc);
 
             Console.WriteLine("------------------- Part 2 -----------------------");
 

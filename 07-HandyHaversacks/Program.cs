@@ -25,7 +25,7 @@ namespace _07_HandyHaversacks
                 }
             }
 
-            Console.WriteLine("------------------- Part 1 -----------------------");
+            Console.WriteLine("07-HandyHaversacks\n------------------- Part 1 -----------------------");
 
             HashSet<Bag> found = new HashSet<Bag>();
 
@@ -60,7 +60,7 @@ namespace _07_HandyHaversacks
             Console.WriteLine(found.Count);
 
             Console.WriteLine("------------------- Part 2 -----------------------");
-
+            Console.WriteLine("*******INCOMPLETE*********");
             found = new HashSet<Bag>();
 
             Recipe root = recipes.Where(a => a.ThisBag.Raw == "shiny gold").FirstOrDefault();

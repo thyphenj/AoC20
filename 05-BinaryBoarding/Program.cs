@@ -22,7 +22,7 @@ namespace _05_BinaryBoarding
                 }
             }
 
-            System.Console.WriteLine("--------------------- Part 1 ---------------------------");
+            System.Console.WriteLine("05-BinaryBoarding\n--------------------- Part 1 ---------------------------");
             {
                 int max = 0;
                 foreach (var p in passes)
@@ -41,7 +41,8 @@ namespace _05_BinaryBoarding
                 {
                     if (pass.ID != counter)
                     {
-                        Console.WriteLine($"{counter,4} {pass.ID - 1}");
+                        if (counter != 0)
+                            Console.WriteLine($"{pass.ID - 1}");
                         counter = pass.ID;
                     }
 

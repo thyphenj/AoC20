@@ -36,13 +36,12 @@ namespace _04_PassportProcessing
                 passports.Add(p);
             }
 
-            //------------------------------ Part 1 ------------------------------------
-            System.Console.WriteLine("--------------------- Part 1 ---------------------------");
+            System.Console.WriteLine("04-PassportProcessing\n--------------------- Part 1 ---------------------------");
             {
                 System.Console.WriteLine(passports.Where(a => a.AreFieldsPresent()).Count());
                 System.Console.WriteLine();
             }
-            //------------------------------ Part 2 ------------------------------------
+
             System.Console.WriteLine("--------------------- Part 2 ---------------------------");
             {
                 System.Console.WriteLine(passports.Where(a => a.AreFieldsPresent() && a.AreFieldsValid()).Count());
