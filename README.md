@@ -7,6 +7,6 @@ to complete everything **before the end of the year**
 
 ### Links
 
-[editor on GitHub](https://github.com/thyphenj/AoC20/edit/master/README.md)
+[editor](https://github.com/thyphenj/AoC20/edit/master/README.md)
 
 [documentation](https://docs.github.com/categories/github-pages-basics/)
