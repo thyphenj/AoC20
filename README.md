@@ -2,7 +2,8 @@
 
 [Advent of Code](https://adventofcode.com/) is an annual coding advent calendar.
 
-This year I'm keeping all the code in Github and I'm determined to complete everything **before the end of the year**
+This year I'm keeping all the code in Github and I'm determined 
+to complete everything **before the end of the year**
 
 ### Links
 
