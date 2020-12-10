@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-HandheldHalting", "08-Ha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-EncodingError", "09-EncodingError\09-EncodingError.csproj", "{BD722CA6-0265-406D-BE6A-BC4C0746BB2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-AdapterArray", "10-AdapterArray\10-AdapterArray.csproj", "{45763A20-2BE3-43F6-93F7-093270E84EA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{BD722CA6-0265-406D-BE6A-BC4C0746BB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD722CA6-0265-406D-BE6A-BC4C0746BB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD722CA6-0265-406D-BE6A-BC4C0746BB2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45763A20-2BE3-43F6-93F7-093270E84EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45763A20-2BE3-43F6-93F7-093270E84EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45763A20-2BE3-43F6-93F7-093270E84EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45763A20-2BE3-43F6-93F7-093270E84EA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
