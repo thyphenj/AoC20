@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-EncodingError", "09-Enco
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-AdapterArray", "10-AdapterArray\10-AdapterArray.csproj", "{45763A20-2BE3-43F6-93F7-093270E84EA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-SeatingSystem", "11-SeatingSystem\11-SeatingSystem.csproj", "{7FA8044F-7A4A-46FF-AAF0-18FC86D8561E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{45763A20-2BE3-43F6-93F7-093270E84EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45763A20-2BE3-43F6-93F7-093270E84EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45763A20-2BE3-43F6-93F7-093270E84EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA8044F-7A4A-46FF-AAF0-18FC86D8561E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA8044F-7A4A-46FF-AAF0-18FC86D8561E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA8044F-7A4A-46FF-AAF0-18FC86D8561E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA8044F-7A4A-46FF-AAF0-18FC86D8561E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
