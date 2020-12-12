@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-AdapterArray", "10-Adapt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-SeatingSystem", "11-SeatingSystem\11-SeatingSystem.csproj", "{7FA8044F-7A4A-46FF-AAF0-18FC86D8561E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12-RainRisk", "12-RainRisk\12-RainRisk.csproj", "{A86D7771-3B8E-406F-A9F1-E69960507E7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{7FA8044F-7A4A-46FF-AAF0-18FC86D8561E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FA8044F-7A4A-46FF-AAF0-18FC86D8561E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FA8044F-7A4A-46FF-AAF0-18FC86D8561E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A86D7771-3B8E-406F-A9F1-E69960507E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86D7771-3B8E-406F-A9F1-E69960507E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86D7771-3B8E-406F-A9F1-E69960507E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86D7771-3B8E-406F-A9F1-E69960507E7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
