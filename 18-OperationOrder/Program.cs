@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace _18_OperationOrder
 {
@@ -9,7 +10,7 @@ namespace _18_OperationOrder
     {
         static void Main(string[] args)
         {
-            bool test = true; ;
+            bool test = false; ;
             string[] input = File.ReadAllLines("Resources/input.txt");
             if (test)
             {
@@ -18,159 +19,88 @@ namespace _18_OperationOrder
 
             Console.WriteLine("18-Operation Order\n----------------------------Part 1");
 
-            long GRANDTOTAL = 0;
-            foreach (var line in input)
+            long grandTotal = 0L;
+
+            foreach (var str in input)
             {
-                List<Token> tokens = new List<Token>();
-
-                int i = 0;
-                while (i < line.Length)
+                string repl = $"({str})";
+                var bracketedString = Regex.Match(repl, @"\([^(\)]*\)");
+                while (bracketedString.Success)
                 {
-                    tokens.Add(new Token(line[i++]));
-                    if (i < line.Length && line[i] != ' ')
-                    {
-                        tokens.Add(new Token(line[i]));
-                        i++;
-                    }
-                    while (i < line.Length && line[i] == ' ')
-                        i++;
+                    string foundString = bracketedString.Value;
+                    string replacementString = EvaluateLtoR(foundString);
+                    repl = repl.Replace(foundString, replacementString);
+                    bracketedString = Regex.Match(repl, @"\([^(\)]*\)");
                 }
+                grandTotal += long.Parse(repl);
+            }
+            Console.WriteLine(grandTotal);
 
-                long sum = 0;
-                for (int j = Token.MaxDepth(); j > 0; j--)
+            grandTotal = 0L;
+
+            foreach (var str in input)
+            {
+                string repl = $"({str})";
+                Console.WriteLine(repl);
+                var bracketedString = Regex.Match(repl, @"\([^(\)]*\)");
+                while (bracketedString.Success)
                 {
-                    List<Token> next = new List<Token>();
-
-                    int from = tokens.FindIndex(a => a.BracketDepth == j) + 1;
-                    while (from > 0)
-                    {
-                        i = 0;
-                        sum = 0;
-                        while (i < from - 1)
-                        {
-                            next.Add(tokens[i++]);
-                        }
-
-                        {
-                            sum = tokens[from++].Value;
-
-                            char op = tokens[from++].Text;
-                            while (op == '+' || op == '*')
-                            {
-                                long nxt = tokens[from++].Value;
-                                if (op == '*')
-                                    sum *= nxt;
-                                else
-                                    sum += nxt;
-                                op = tokens[from++].Text;
-                            }
-                            next.Add(new Token(sum, j - 1));
-                        }
-
-                        i = from;
-                        while (i < tokens.Count)
-                        {
-                            next.Add(tokens[i++]);
-                        }
-                        tokens = next;
-                        next = new List<Token>();
-                        from = tokens.FindIndex(a => a.BracketDepth == j) + 1;
-                    }
-
+                    string foundString = bracketedString.Value;
+                    string replacementString = EvaluateAdvanced(foundString);
+                    repl = repl.Replace(foundString, replacementString);
+                    bracketedString = Regex.Match(repl, @"\([^(\)]*\)");
                 }
-                i = 0;
-                sum = tokens[i++].Value;
-                while (i < tokens.Count)
-                {
-                    int op = tokens[i++].Text;
-                    long nxt = tokens[i++].Value;
-                    if (op == '+')
-                        sum += nxt;
-                    else
-                        sum *= nxt;
-                }
-                //Console.WriteLine(sum);
-                GRANDTOTAL += sum;
+                grandTotal += long.Parse(repl);
+            }
+            Console.WriteLine(grandTotal);
+        }
+
+
+        public static string EvaluateLtoR(string inputString)
+        {
+            string retval = inputString;
+
+            Match m = Regex.Match(inputString, @"[0-9]* [+\*] [0-9]*");
+            while (m.Success)
+            {
+                string[] tokens = m.Value.Split(' ');
+                long n1 = long.Parse(tokens[0]);
+                long n2 = long.Parse(tokens[2]);
+                if (tokens[1] == "+")
+                    retval = $"{retval.Substring(0, m.Index)}{n1 + n2}{retval.Substring(m.Index + m.Value.Length)}";
+                else
+                    retval = $"{retval.Substring(0, m.Index)}{n1 * n2}{retval.Substring(m.Index + m.Value.Length)}";
+
+                m = Regex.Match(retval, @"[0-9]* [+\*] [0-9]*");
+            }
+            return retval.Replace("(", "").Replace(")", "");
+        }
+        public static string EvaluateAdvanced(string inputString)
+        {
+            string retval = inputString;
+
+            Match m = Regex.Match(inputString, @"[0-9]* [+] [0-9]*");
+            while (m.Success)
+            {
+                string[] tokens = m.Value.Split(' ');
+                long n1 = long.Parse(tokens[0]);
+                long n2 = long.Parse(tokens[2]);
+                retval = $"{retval.Substring(0, m.Index)}{n1 + n2}{retval.Substring(m.Index + m.Value.Length)}";
+
+                m = Regex.Match(retval, @"[0-9]* [+] [0-9]*");
             }
 
-            Console.WriteLine(GRANDTOTAL);
-
-
-            Console.WriteLine("----------------------------Part 2");
-
-            GRANDTOTAL = 0;
-            foreach (var line in input)
+            m = Regex.Match(retval, @"[0-9]* [*] [0-9]*");
+            while (m.Success)
             {
-                List<Token> tokens = new List<Token>();
+                string[] tokens = m.Value.Split(' ');
+                long n1 = long.Parse(tokens[0]);
+                long n2 = long.Parse(tokens[2]);
+                retval = $"{retval.Substring(0, m.Index)}{n1 * n2}{retval.Substring(m.Index + m.Value.Length)}";
 
-                int i = 0;
-                while (i < line.Length)
-                {
-                    tokens.Add(new Token(line[i++]));
-                    if (i < line.Length && line[i] != ' ')
-                    {
-                        tokens.Add(new Token(line[i]));
-                        i++;
-                    }
-                    while (i < line.Length && line[i] == ' ')
-                        i++;
-                }
-
-                long sum = 0;
-                for (int j = Token.MaxDepth(); j > 0; j--)
-                {
-                    List<Token> next = new List<Token>();
-
-                    int from = tokens.FindIndex(a => a.BracketDepth == j) + 1;
-                    while (from > 0)
-                    {
-                        i = 0;
-                        sum = 0;
-                        while (i < from - 1)
-                        {
-                            next.Add(tokens[i++]);
-                        }
-
-                        {
-                            var prev = tokens[from++];
-                            var op = tokens[from++];
-
-                            while (op.Text == '*' || op.Text == '+')
-                            {
-                                while (op.Text == '*')
-                                {
-                                    next.Add(prev);
-                                    next.Add(op);
-                                    prev = tokens[from++];
-                                    op = tokens[from++];
-                                }
-
-                                sum = prev.Value;
-                                while (op.Text == '+')
-                                {
-                                    sum += tokens[from++].Value;
-                                    op = tokens[from++];
-                                }
-                                next.Add(new Token(sum, j));
-                            }
-
-
-                        }
-
-                    }
-
-                    i = from;
-                    while (i < tokens.Count)
-                    {
-                        next.Add(tokens[i++]);
-                    }
-                    tokens = next;
-                    next = new List<Token>();
-                    from = tokens.FindIndex(a => a.BracketDepth == j) + 1;
-                }
-
+                m = Regex.Match(retval, @"[0-9]* [*] [0-9]*");
             }
-
+            return retval.Replace("(", "").Replace(")", "");
         }
     }
 }
